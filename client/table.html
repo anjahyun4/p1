@@ -1,0 +1,80 @@
+<template name="table">
+  <table class="table table-striped table-condensed">
+    <thead>
+    <tr>
+      <td>ID</td>
+      <td>이름</td>
+      <td>나이</td>
+      <td>자리</td>
+      <td>하는게임</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each boards}}
+      <tr dataId="{{_id}}" data-toggle="modal" data-target="#myModal">
+        <td>{{_id}}</td>
+        <td>{{inpName}}</td>
+        <td>{{inpAge}}</td>
+        <td>{{inpSeat}}</td>
+        <td>{{inpSelect}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+    <table width="600" border="5" align="center" bordercolor="#DF013A" bgcolor="#FACC2E" cellpadding="100" >
+        <tr>
+            <td align="center" colspan="5">좌석 현황도</td>
+        </tr>
+        <tr>
+
+            <td align="center" bgcolor="{{isAqua1}}">1</td>
+            <td align="center" bgcolor="{{isAqua2}}">2</td>
+            <td align="center" bgcolor="{{isAqua3}}">3</td>
+            <td align="center" bgcolor="{{isAqua4}}">4</td>
+            <td align="center" bgcolor="{{isAqua5}}">5</td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="{{isAqua6}}">6</td>
+            <td align="center" bgcolor="{{isAqua7}}">7</td>
+            <td align="center" bgcolor="{{isAqua8}}">8</td>
+            <td align="center" bgcolor="{{isAqua9}}">9</td>
+            <td align="center" bgcolor="{{isAqua10}}">10</td>
+        </tr>
+
+        <tr>
+            <td align="center" bgcolor="{{isAqua11}}">11</td>
+            <td align="center" bgcolor="{{isAqua12}}">12</td>
+            <td align="center" bgcolor="{{isAqua13}}">13</td>
+            <td align="center" bgcolor="{{isAqua14}}">14</td>
+            <td align="center" bgcolor="{{isAqua15}}">15</td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="{{isAqua16}}">16</td>
+            <td align="center" bgcolor="{{isAqua17}}">17</td>
+            <td align="center" bgcolor="{{isAqua18}}">18</td>
+            <td align="center" bgcolor="{{isAqua19}}">19</td>
+            <td align="center" bgcolor="{{isAqua20}}">20</td>
+        </tr>
+    </table>
+<br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{prbar1}}" aria-valuemin="0" aria-valuemax="100" style="width: {{prbar1}}%">
+            <span class="sr-only">40% Complete (success)</span>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{prbar2}}" aria-valuemin="0" aria-valuemax="100" style="width: {{prbar2}}%">
+            <span class="sr-only">20% Complete</span>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{prbar3}}" aria-valuemin="0" aria-valuemax="100" style="width: {{prbar3}}%">
+            <span class="sr-only">60% Complete (warning)</span>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{prbar4}}" aria-valuemin="0" aria-valuemax="100" style="width: {{prbar4}}%">
+            <span class="sr-only">80% Complete (danger)</span>
+        </div>
+    </div>
+</template>
